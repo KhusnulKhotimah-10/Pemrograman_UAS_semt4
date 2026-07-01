@@ -84,6 +84,11 @@ Sistem ini dibangun menggunakan teknologi terkini untuk kecepatan dan performa:
 
 ---
 
+### **LAPORAN AKHIR PRAKTIKUM**
+https://github.com/KhusnulKhotimah-10/Lab_Web7.git
+
+---
+
 *Dibuat untuk kebutuhan operasional PT. Logistik Mandiri.*
 
 ---
