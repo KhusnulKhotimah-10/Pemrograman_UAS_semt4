@@ -79,7 +79,7 @@ Fitur keamanan berupa *pop-up* dialog.
 
 ---
 
-### **Laporan Akhir Praktikum**
+### **LAPORAN AKHIR PRAKTIKUM**
 https://github.com/KhusnulKhotimah-10/Lab_Web7.git
 
 ---
