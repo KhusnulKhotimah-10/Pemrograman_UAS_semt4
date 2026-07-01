@@ -1,69 +1,87 @@
-# CodeIgniter 4 Application Starter
+Tentu, ini adalah draf `README.md` yang lengkap dan profesional. Anda bisa menyalin teks di bawah ini ke dalam file `README.md` di repository GitHub Anda.
 
-## What is CodeIgniter?
+Pastikan Anda telah mengunggah semua file gambar screenshot tersebut ke folder yang sama di repository Anda agar gambarnya muncul dengan benar.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+---
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+# Sistem Manajemen Inventaris - PT. LOGISTIK MANDIRI
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+Aplikasi **Sistem Manajemen Inventaris PT. Logistik Mandiri** adalah platform berbasis web yang dibangun untuk mempermudah pencatatan, pemantauan, dan pengelolaan data stok barang secara real-time.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+## 🚀 Fitur Utama
 
-## Installation & updates
+* **Secure Authentication:** Halaman login untuk memastikan hanya staf berwenang yang dapat mengakses sistem.
+* **CRUD Barang:**
+* **Create:** Menambah data barang baru dengan cepat.
+* **Read:** Menampilkan daftar inventaris yang tersusun rapi.
+* **Update:** Mengubah informasi barang (nama, stok, harga) dengan modal yang intuitif.
+* **Delete:** Menghapus data barang dengan konfirmasi keamanan.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+* **Modern UI:** Antarmuka bersih, responsif, dan nyaman dipandang dengan dukungan Tailwind CSS.
 
-## Setup
+## 📸 Dokumentasi Tampilan
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+### 1. Halaman Login
 
-## Important Change with index.php
+Halaman akses masuk untuk admin/staf PT. Logistik Mandiri.
+<img width="318" height="347" alt="Screenshot 2026-06-25 095643" src="https://github.com/user-attachments/assets/0be4155a-3ef7-41a7-810a-ea1310173348" />
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+### 2. Dashboard Data Barang
 
-## Repository Management
+Tampilan utama yang menampilkan tabel stok barang secara mendetail.
+<img width="771" height="268" alt="Screenshot 2026-06-25 095738" src="https://github.com/user-attachments/assets/ed3c3e1d-1042-4fe7-bc03-6030909dd4e7" />
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
 
-## Server Requirements
+### 3. Fitur Edit Barang
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+Formulir untuk memperbarui data barang yang sudah ada.
+<img width="540" height="367" alt="Screenshot 2026-06-25 095810" src="https://github.com/user-attachments/assets/2f43a449-435d-4fdc-a0b6-3d05a9eba6a4" />
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### 4. Konfirmasi Penghapusan
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Peringatan keamanan sebelum data benar-benar dihapus dari database.
+<img width="458" height="143" alt="Screenshot 2026-06-25 095847" src="https://github.com/user-attachments/assets/34ece9fc-34c7-46df-b334-8ca1a1b36807" />
+
+
+### 5. Form Tambah Barang
+
+Modal interaktif untuk menambahkan barang baru ke dalam sistem.
+<img width="327" height="309" alt="Screenshot 2026-06-25 095909" src="https://github.com/user-attachments/assets/a180dedf-6f00-4ca4-8638-61b31f2b46ed" />
+
+
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+Sistem ini dibangun menggunakan teknologi terkini untuk kecepatan dan performa:
+
+| Komponen | Teknologi |
+| --- | --- |
+| **Frontend Framework** | Vue.js 3 |
+| **Styling** | Tailwind CSS |
+| **Routing** | Vue Router |
+| **API Handling** | Axios |
+| **Backend** | PHP (RESTful API) |
+
+## 💻 Cara Menjalankan
+
+1. Pastikan XAMPP sudah terinstal dan Apache/MySQL dalam kondisi **Running**.
+2. Letakkan folder *backend* di `htdocs`.
+3. Jalankan server API Anda.
+4. Buka file `index.html` pada browser atau melalui local server.
+
+---
+
+*Dibuat untuk kebutuhan operasional PT. Logistik Mandiri.*
+
+---
+
+
+
