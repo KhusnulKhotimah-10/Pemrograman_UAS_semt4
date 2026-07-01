@@ -25,6 +25,7 @@ Aplikasi **Sistem Manajemen Inventaris PT. Logistik Mandiri** adalah platform be
 ### 1. Halaman Login
 
 Halaman akses masuk untuk admin/staf PT. Logistik Mandiri.
+
 <img width="318" height="347" alt="Screenshot 2026-06-25 095643" src="https://github.com/user-attachments/assets/0be4155a-3ef7-41a7-810a-ea1310173348" />
 
 
@@ -32,6 +33,7 @@ Halaman akses masuk untuk admin/staf PT. Logistik Mandiri.
 ### 2. Dashboard Data Barang
 
 Tampilan utama yang menampilkan tabel stok barang secara mendetail.
+
 <img width="771" height="268" alt="Screenshot 2026-06-25 095738" src="https://github.com/user-attachments/assets/ed3c3e1d-1042-4fe7-bc03-6030909dd4e7" />
 
 
@@ -39,6 +41,7 @@ Tampilan utama yang menampilkan tabel stok barang secara mendetail.
 ### 3. Fitur Edit Barang
 
 Formulir untuk memperbarui data barang yang sudah ada.
+
 <img width="540" height="367" alt="Screenshot 2026-06-25 095810" src="https://github.com/user-attachments/assets/2f43a449-435d-4fdc-a0b6-3d05a9eba6a4" />
 
 
@@ -46,12 +49,14 @@ Formulir untuk memperbarui data barang yang sudah ada.
 ### 4. Konfirmasi Penghapusan
 
 Peringatan keamanan sebelum data benar-benar dihapus dari database.
+
 <img width="458" height="143" alt="Screenshot 2026-06-25 095847" src="https://github.com/user-attachments/assets/34ece9fc-34c7-46df-b334-8ca1a1b36807" />
 
 
 ### 5. Form Tambah Barang
 
 Modal interaktif untuk menambahkan barang baru ke dalam sistem.
+
 <img width="327" height="309" alt="Screenshot 2026-06-25 095909" src="https://github.com/user-attachments/assets/a180dedf-6f00-4ca4-8638-61b31f2b46ed" />
 
 
