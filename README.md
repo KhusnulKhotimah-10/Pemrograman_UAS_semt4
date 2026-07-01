@@ -79,6 +79,15 @@ Fitur keamanan berupa *pop-up* dialog.
 
 ---
 
+**Laporan Akhir Praktikum**
+https://github.com/KhusnulKhotimah-10/Lab_Web7.git
+
+---
+
+
+bang minta simpen ini aja di readme uas kmren, tulis nya URL link laporan praktikum akhir
+
+
 ## 🛠 Teknologi yang Digunakan
 
 
