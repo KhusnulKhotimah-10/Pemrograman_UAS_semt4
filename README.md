@@ -1,99 +1,69 @@
-# Pemrograman_UAS_semt4
+# CodeIgniter 4 Application Starter
 
----
+## What is CodeIgniter?
 
-# Sistem Manajemen Inventaris - PT. Logistik Mandiri
+CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
+More information can be found at the [official site](https://codeigniter.com).
 
-Sistem Manajemen Inventaris adalah aplikasi web yang dirancang untuk membantu PT. Logistik Mandiri dalam mengelola data stok barang secara efisien, mulai dari penambahan, pembaruan, hingga penghapusan data barang.
+This repository holds a composer-installable app starter.
+It has been built from the
+[development repository](https://github.com/codeigniter4/CodeIgniter4).
 
-## 📋 Fitur Utama
+More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
 
-Sistem ini memiliki beberapa fitur fungsional sebagai berikut:
+You can read the [user guide](https://codeigniter.com/user_guide/)
+corresponding to the latest version of the framework.
 
-1. **Autentikasi Pengguna**: Sistem keamanan untuk akses masuk pengguna terdaftar.
-2. **Manajemen Stok Barang**: Menampilkan daftar barang secara terorganisir (Nama, Stok, Harga).
-3. **Tambah Barang**: Form untuk input data barang baru ke dalam sistem.
-4. **Edit Barang**: Memperbarui informasi barang yang sudah ada.
-5. **Hapus Barang**: Menghapus data barang dengan konfirmasi keamanan untuk mencegah kesalahan penghapusan.
+## Installation & updates
 
----
+`composer create-project codeigniter4/appstarter` then `composer update` whenever
+there is a new release of the framework.
 
-## 📸 Panduan Antarmuka (User Interface)
+When updating, check the release notes to see if there are any changes you might need to apply
+to your `app` folder. The affected files can be copied or merged from
+`vendor/codeigniter4/framework/app`.
 
-Berikut adalah penjelasan alur penggunaan aplikasi berdasarkan halaman yang tersedia:
+## Setup
 
-### 1. Halaman Login
+Copy `env` to `.env` and tailor for your app, specifically the baseURL
+and any database settings.
 
-Halaman ini adalah pintu masuk utama untuk mengakses sistem.
+## Important Change with index.php
 
-<img width="318" height="347" alt="Screenshot 2026-06-25 095643" src="https://github.com/user-attachments/assets/29541096-0d03-4547-a841-73cd7264261c" />
+`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
+for better security and separation of components.
 
+This means that you should configure your web server to "point" to your project's *public* folder, and
+not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
+framework are exposed.
 
-* **Fungsi**: Memasukkan `Username` dan `Password` untuk mendapatkan akses.
-* *Catatan: Pastikan kredensial yang dimasukkan valid.*
+**Please** read the user guide for a better explanation of how CI4 works!
 
-### 2. Dashboard Data Stok Barang
+## Repository Management
 
-Halaman utama setelah login yang menampilkan daftar seluruh inventaris.
+We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
+We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
+FEATURE REQUESTS.
 
-<img width="771" height="268" alt="Screenshot 2026-06-25 095738" src="https://github.com/user-attachments/assets/d2a3cabe-ffe9-430a-a93a-fc68d149f3be" />
+This repository is a "distribution" one, built by our release preparation script.
+Problems with it can be raised on our forum, or as issues in the main repository.
 
+## Server Requirements
 
-* **Informasi**: Menampilkan daftar barang, jumlah stok, dan harga per unit.
-* **Aksi**:
-* Klik tombol **"+ Tambah Barang"** untuk menambahkan data baru.
-* Klik **"Edit"** pada baris barang untuk mengubah data.
-* Klik **"Hapus"** untuk menghilangkan data dari sistem.
-* Klik **"Logout"** di pojok kanan atas untuk mengakhiri sesi.
+PHP version 8.2 or higher is required, with the following extensions installed:
 
+- [intl](http://php.net/manual/en/intl.requirements.php)
+- [mbstring](http://php.net/manual/en/mbstring.installation.php)
 
-### 3. Modal Tambah Barang
+> [!WARNING]
+> - The end of life date for PHP 7.4 was November 28, 2022.
+> - The end of life date for PHP 8.0 was November 26, 2023.
+> - The end of life date for PHP 8.1 was December 31, 2025.
+> - If you are still using below PHP 8.2, you should upgrade immediately.
+> - The end of life date for PHP 8.2 will be December 31, 2026.
 
-Muncul ketika pengguna memilih opsi untuk menambahkan barang baru.
+Additionally, make sure that the following extensions are enabled in your PHP:
 
-<img width="540" height="367" alt="Screenshot 2026-06-25 095810" src="https://github.com/user-attachments/assets/1c83059e-6f6d-4bdd-9fd5-a258c5ba3d70" />
-
-
-* Pengguna diminta memasukkan: `Nama Barang`, `Stok`, dan `Harga`.
-* Klik **"Simpan"** untuk menyimpan data atau **"Batal"** untuk kembali.
-
-### 4. Modal Edit Barang
-
-Muncul saat pengguna memilih opsi "Edit" pada salah satu barang.
-
-<img width="458" height="143" alt="Screenshot 2026-06-25 095847" src="https://github.com/user-attachments/assets/14095b5c-de5e-4939-881f-5502d3e875d0" />
-
-
-* Memungkinkan perubahan data yang sudah ada (Nama, Stok, atau Harga).
-* Klik **"Simpan"** untuk memperbarui data di database.
-
-### 5. Konfirmasi Hapus
-
-Fitur keamanan berupa *pop-up* dialog.
-
-<img width="327" height="309" alt="Screenshot 2026-06-25 095909" src="https://github.com/user-attachments/assets/9793eb4a-f058-4961-8818-2dd91c080736" />
-
-
-* Muncul ketika tombol "Hapus" ditekan.
-* Meminta konfirmasi **"Yakin hapus?"** untuk memastikan pengguna benar-benar ingin menghapus data tersebut sebelum tindakan dieksekusi.
-
----
-
-### **LAPORAN AKHIR PRAKTIKUM**
-https://github.com/KhusnulKhotimah-10/Lab_Web7.git
-
----
-
-
-bang minta simpen ini aja di readme uas kmren, tulis nya URL link laporan praktikum akhir
-
-
-## 🛠 Teknologi yang Digunakan
-
-
-
-* **Frontend**: HTML, CSS, JavaScript (atau framework jika ada)
-* **Backend**: PHP/Node.js/Python
-* **Database**: MySQL/SQLite/PostgreSQL
-
----
+- json (enabled by default - don't turn it off)
+- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
+- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
